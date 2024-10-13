@@ -1,0 +1,9 @@
+artifacts_rootdir: artifacts
+
+stage_01:
+  root_dir: artifacts/data
+  file_url: 'https://drive.google.com/file/d/1u_ol6f4AJeOH-VpwS78-OHnPOtoUjSaI/view?usp=drive_link'
+  zipped_dir: artifacts/data/data.zip
+  unzipped: artifacts/data/
+
+
