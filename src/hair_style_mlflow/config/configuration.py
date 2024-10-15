@@ -1,6 +1,6 @@
 from pathlib import Path
 from hair_style_mlflow.constants import *
-from hair_style_mlflow.entity.config_en import data_config
+from hair_style_mlflow.entity.config_en import (data_config,base_model_config)
 from hair_style_mlflow.utils.common_utils import readYaml,create_dir
 
 class config_manager:
@@ -21,6 +21,20 @@ class config_manager:
                     zipped_file=data_conf.zipped_dir,
                     unzipped=data_conf.unzipped
                     )
+    
+    def base_model_conf(self)->base_model_config:
+        base_conf=self.config.stage_02
+        create_dir([base_conf.root_dir])
+
+        return base_model_config(root_dir=base_conf.root_dir,
+                                 base_path=base_conf.base_model,
+                                 updated_base_path=base_conf.updated_base_model,
+                                 params_image_size=base_conf.params_image_size,
+                                 params_include_top=base_conf.params_include_top,
+                                 params_weights=base_conf.params_weights,
+                                 params_learning_rate=base_conf.params_learning_rate,
+                                 params_classes=base_conf.params_classes
+                                 )
         
 
 

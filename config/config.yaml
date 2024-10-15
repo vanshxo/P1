@@ -6,4 +6,16 @@ stage_01:
   zipped_dir: artifacts/data/data.zip
   unzipped: artifacts/data/
 
+stage_02:
+  root_dir: artifacts/models
+  base_model: artifacts/models/base_model.h5
+  updated_base_model: artifacts/models/updated_base_model.h5
+  params_image_size: [224,224,3]
+  params_include_top: False
+  params_learning_rate: 0.01
+  params_weights: 'imagenet'
+  params_classes: 5
+
+
+
 
