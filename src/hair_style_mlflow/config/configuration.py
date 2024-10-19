@@ -1,6 +1,6 @@
 from pathlib import Path
 from hair_style_mlflow.constants import *
-from hair_style_mlflow.entity.config_en import (data_config,base_model_config,trained_model_conf)
+from hair_style_mlflow.entity.config_en import (data_config,base_model_config,trained_model_conf,evaluation_conf)
 from hair_style_mlflow.utils.common_utils import readYaml,create_dir
 
 class config_manager:
@@ -48,6 +48,15 @@ class config_manager:
                                   params_image_size=self.params.image_size,
                                   params_augmentation=self.params.augmentation
                                   )
+    
+    def evaluation_config(self)->evaluation_conf:
+        eval_conf=self.config.stage_04
+        return evaluation_conf(model_path=eval_conf.model_path,
+                               data_path=eval_conf.data_path,
+                               all_params=self.params,
+                               mlflow_uri=eval_conf.mlflow_uri,
+                               params_image_size=self.params.image_size
+                               )
 
 
         

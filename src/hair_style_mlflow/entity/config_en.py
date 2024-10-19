@@ -31,4 +31,14 @@ class trained_model_conf:
     params_augmentation:bool
 
 
+@dataclass(frozen=True)
+class evaluation_conf:
+    model_path: Path
+    data_path: Path
+    all_params: dict
+    mlflow_uri: str
+    params_image_size: list
+    
+
+
 

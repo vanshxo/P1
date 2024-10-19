@@ -24,3 +24,5 @@ logs/
 notebooks/
 
 artifacts/
+mlruns/
+score.json

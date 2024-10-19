@@ -24,5 +24,12 @@ stage_03:
   training_data: artifacts/data/imgs/
 
 
+stage_04:
+  model_path: artifacts/models/trained_model.h5
+  data_path: artifacts/data/imgs/
+  mlflow_uri: 'https://dagshub.com/vanshxo/P1.mlflow'
+  params_image_size: [224,224,3]
+
+
 
 
