@@ -1,3 +1,5 @@
 weights: imagenet
 include_top: False
 image_size: [224,224,3]
+augmentation: True
+epochs: 10

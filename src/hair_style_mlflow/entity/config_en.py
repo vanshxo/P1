@@ -19,3 +19,16 @@ class base_model_config:
     params_learning_rate:float
     params_weights:str
     params_classes:int
+
+@dataclass(frozen=True)
+class trained_model_conf:
+    root_dir:Path
+    updated_base_model_path:Path
+    trained_model_path:Path
+    training_data:Path
+    params_epochs:int
+    params_image_size:list
+    params_augmentation:bool
+
+
+

@@ -17,5 +17,12 @@ stage_02:
   params_classes: 5
 
 
+stage_03:
+  root_dir: artifacts/models
+  updated_base_model_path: artifacts/models/updated_base_model.h5
+  trained_model_path: artifacts/models/trained_model.h5
+  training_data: artifacts/data/imgs/
+
+
 
 
